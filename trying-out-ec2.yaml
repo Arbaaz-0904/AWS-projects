@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "AWS CloudFormation Template: Trying out EC2"
+Resources:
+  TheEC2instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: ami-0ecb62995f68bb549
+      InstanceType: t3.micro
+      KeyName: finalone.pem
+  thesecuritygroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "Allow SSH"
